@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./images/bg-mobile.png');
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1em;
+    width: 100%;
+}
+#settings{
+    background-color: hsl(228, 56%, 26%);
+    border-radius: .75em 5em .75em .75em;
+    width: 100%;
+    padding:2.5em;
+    margin-bottom: 1em;
+    position: relative;
+}
+#settings img{
+    margin-bottom: 2em;
+}
+#settings .buttons{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+#settings button{
+    background-color: hsl(229, 57%, 11%);
+    border: 0;
+    height: 4em;
+    width: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .75em;
+}
+
+#settings button img{
+    margin-top: 2em;
+}
+#data{
+    background-color: hsl(228, 56%, 26%);
+    width: 100%;
+    border-radius: .75em;
+    padding: 2.5em;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+#data p{
+    font-size: .9em;
+    font-weight: 400;
+    color: hsl(243, 100%, 93%);
+}
+#data p #gb{
+    font-weight: 700;
+    color: white;
+}
+
+progress{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    border-radius: 2em;
+    position: relative;
+    margin: 1em 0;
+}
+progress::-webkit-progress-bar{
+    background-color: hsl(229, 57%, 16%);
+    border-radius: 2em;
+    height: 20px;
+    padding: 3px;
+}
+progress::-webkit-progress-value{
+    border-radius: 2em;
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
+progress::before{
+    content: '';
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: white;
+    display: block;
+    position: absolute;
+    z-index: 100;
+    top: 62.5%;
+    left: 71.5%;
+    transform: translate(-50%, -50%);
+}
+.progress-value{
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+.progress-value p{
+    font-weight: 700;
+}
+.left{
+    text-transform: uppercase;
+    font-family: inherit;
+    position: absolute;
+    padding: 1em 1.5em;
+    border-radius: .5em;
+    background-color: white;
+    color: hsl(229, 57%, 11%);
+    left: 50%;
+    top: 81%;
+    transform: translate(-50%,-50%);
+}
+#data .left p{
+    font-size: .8em;
+    color: hsl(229, 7%, 55%);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    letter-spacing: .1em;
+}
+.left span{
+    margin-right: .15em;
+    color: hsl(229, 57%, 11%);
+    font-size: 2.5em;
+    font-weight: 700;
+}
+@media(min-width:768px){
+    body {
+        background-color: hsl(229, 57%, 11%);
+        background-image: url('./images/bg-desktop.png');
+        background-position: 0% 100%;
+    }
+    main {
+        align-items: flex-end;
+        flex-direction: row;
+        width: 65vw;
+    }
+    #settings {
+        width: 40%;
+        padding: 2.5em;
+        margin-bottom: 0em;
+        margin-right: 2em;
+    }
+    #settings .buttons {
+        justify-content: space-between;
+        width: 70%;
+    }
+    #data {
+        width: 60%;
+        text-align: left;
+    }
+    #data p {
+        font-size: 1em;
+    }
+
+    progress {
+        margin: 1em 0 .75em;
+    }
+    progress::-webkit-progress-bar {
+        height: 25px;
+        padding: 4px;
+    }
+
+    progress::-webkit-progress-value {
+        border-radius: 2em;
+    }
+
+    progress::before {
+        height: 13px;
+        width: 13px;
+        top: 79%;
+        left: 72.5%;
+    }
+    .progress-value {
+        margin-bottom: 0em;
+    }
+    .left {
+        left: 73.5%;
+        top: 42%;
+    }
+    #data .left p {
+        font-size: .8em;
+        color: hsl(229, 7%, 55%);
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        letter-spacing: .1em;
+    }
+    .left span {
+        margin-right: .15em;
+        color: hsl(229, 57%, 11%);
+        font-size: 2.5em;
+        font-weight: 700;
+    }
+    .left::after{
+        content: '';
+        border-style: solid;
+        border-width: 0 25px 25px 0;
+        border-color: transparent #fff transparent transparent;
+        position: absolute;
+        top: 110%;
+        right: -.7575em;
+        transform: translate(-50%, -50%);
+    }
+}
